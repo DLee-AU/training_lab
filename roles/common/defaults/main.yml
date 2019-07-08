@@ -1,2 +1,9 @@
 ---
 # defaults file for roles/common
+
+three_tier_packages:
+  - httpie
+  - python-pip
+  - haproxy
+  - tomcat
+  - postgresql-server
