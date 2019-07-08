@@ -1,2 +1,12 @@
 ---
 # handlers file for roles/postgres
+
+- name: enable postgresql
+  service:
+    name: postgresql
+    enabled: yes
+
+- name: start postgresql
+  service: 
+    name: postgresql
+    state: started
