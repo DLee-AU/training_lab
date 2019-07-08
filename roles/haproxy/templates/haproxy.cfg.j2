@@ -25,9 +25,6 @@ backend app-servers
   mode http
   balance roundrobin
   option forwardfor  
-{% for host in groups['apps'] %}
+{% for HOST in groups['apps'] %}
   server app{{ loop['index'] }} {{ hostvars[HOST]['inventory_hostname'] }}:8080 cookie app{{ loop['index'] }} check
 {% endfor %}
-
-# server {{ hostvars[host].ansible_hostname }} {{hostvars[host].ansible_fqdn }}:8080 cookie {{ hostvars[host].ansible_hostname }} check
-# server app{{ loop['index'] }} {{ hostvars[HOST]['inventory_hostname'] }}:8080 cookie app{{ loop['index'] }} check

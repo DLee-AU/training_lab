@@ -25,6 +25,10 @@
     name: tomcat
     enabled: yes
 
+- name: debug
+  debug: 
+    var: groups['apps']
+
 - name: copy static index.html to tomcat webapps/ansible/index.html
   template:
     src: index.html.j2
