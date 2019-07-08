@@ -27,12 +27,12 @@
 
 - name: copy static index.html to tomcat webapps/ansible/index.html
   template:
-    src: index.html.{{ item }}
+    src: index.html.j2
     dest: /usr/share/tomcat/webapps/ansible/index.html
-  delegate_to: "{{ item }}"
+  delegate_to: "{{ item }}.ansible_hostname"
   delegate_facts: True
   loop: "{{groups['apps']}}"
-  tags: ['never']
+  #tags: ['never']
 
 - name: copy static index.html to tomcat webapps/ansible/index.html
   template:
@@ -49,7 +49,7 @@
   delegate_to: app1.{{GUID}}.internal
   delegate_facts: True
   notify: start tomcat
-  #tags: ['never']
+  tags: ['never']
 
 - name: copy static index.html to tomcat webapps/ansible/index.html
   copy:
@@ -58,5 +58,5 @@
   delegate_to: app2.{{GUID}}.internal
   delegate_facts: True
   notify: start tomcat
-  #tags: ['never']
+  tags: ['never']
 ...
