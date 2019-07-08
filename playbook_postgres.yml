@@ -1,0 +1,9 @@
+---
+
+- name: deploy postgres
+  hosts: frontends
+  #gather_facts: false # remove later! speeds up testing
+  become: true
+
+  roles:
+    - role: postgres

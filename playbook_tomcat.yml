@@ -1,0 +1,10 @@
+---
+# tasks file for roles/tomcat
+
+- name: deploy tomcat
+  hosts: apps
+  gather_facts: false
+  become: true
+
+  roles:
+    - role: tomcat

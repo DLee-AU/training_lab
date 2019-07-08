@@ -1,0 +1,7 @@
+---
+# handlers file for roles/tomcat
+
+- name: start tomcat
+  service:
+    name: tomcat
+    state: started
