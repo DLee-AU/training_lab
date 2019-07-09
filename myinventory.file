@@ -21,7 +21,7 @@ frontend1.3ecc.internal ansible_ssh_host=frontend1.3ecc.example.opentlc.com
 
 [apps]
 ## These are the apps
-app1.3ecc.internal ansible_ssh_host=app1.3ecc.example.opentlc.com
+app1.3ecc.internal ansible_ssh_host=app1.3ecc.example.opentlc.com url=
 app2.3ecc.internal ansible_ssh_host=app2.3ecc.example.opentlc.com
 
 [appdbs]
