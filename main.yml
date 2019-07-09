@@ -1,0 +1,19 @@
+---
+
+- name: Lets Play
+  hosts: all
+  gather_facts: true
+  become: true
+
+- import_playbook:
+    playbook_commmon.yml
+
+- import_playbook:
+    playbook_haproxy.yml
+
+- import_playbook:
+    playbook_tomcat.yml
+
+- import_playbook:
+    playbook_postgres.yml
+  
