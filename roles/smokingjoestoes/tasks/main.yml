@@ -25,6 +25,6 @@
       return_content: no # not required. Whether or not to return the body of the response as a "content" key in the dictionary result. If the reported Content-type is "application/json", then the JSON is additionally loaded into a key called C(json) in the dictionary results.
       validate_certs: yes # not required. If C(no), SSL certificates will not be validated.  This should only set to C(no) used on personally controlled sites using self-signed certificates.  Prior to 1.9.2 the code defaulted to C(no).
       client_cert: undefined # not required. PEM formatted certificate chain file to be used for SSL client authentication. This file can also include the key as well, and if the key is included, I(client_key) is not required
-    url: {{ hostvars[]}} 
+      #url: {{ hostvars[]}} 
 
-    http://frontend1.${GUID}.example.opentlc.com
+      #http://frontend1.${GUID}.example.opentlc.com
